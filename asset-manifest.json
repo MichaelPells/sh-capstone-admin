@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/sh-capstone-admin/static/css/main.4cc8c723.css",
-    "main.js": "/sh-capstone-admin/static/js/main.f3f88e02.js",
-    "static/media/Background.jpg": "/sh-capstone-admin/static/media/Background.c4b8bc851885816e5757.jpg",
+    "main.css": "/sh-capstone-admin/static/css/main.7738a148.css",
+    "main.js": "/sh-capstone-admin/static/js/main.ff1273b4.js",
     "static/media/Display.png": "/sh-capstone-admin/static/media/Display.5660adb310803d8778ba.png",
+    "static/media/Background.jpg": "/sh-capstone-admin/static/media/Background.c2b069a15e3173dc172b.jpg",
     "static/media/DP.jpg": "/sh-capstone-admin/static/media/DP.f15ef798c20b6afabb86.jpg",
     "static/media/Team.png": "/sh-capstone-admin/static/media/Team.842248da60cc58447fd2.png",
     "static/media/Signout.png": "/sh-capstone-admin/static/media/Signout.15ae0e181151d66d43e9.png",
     "index.html": "/sh-capstone-admin/index.html",
-    "main.4cc8c723.css.map": "/sh-capstone-admin/static/css/main.4cc8c723.css.map",
-    "main.f3f88e02.js.map": "/sh-capstone-admin/static/js/main.f3f88e02.js.map"
+    "main.7738a148.css.map": "/sh-capstone-admin/static/css/main.7738a148.css.map",
+    "main.ff1273b4.js.map": "/sh-capstone-admin/static/js/main.ff1273b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cc8c723.css",
-    "static/js/main.f3f88e02.js"
+    "static/css/main.7738a148.css",
+    "static/js/main.ff1273b4.js"
   ]
 }
