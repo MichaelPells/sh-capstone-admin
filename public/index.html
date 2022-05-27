@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Pellsea Administrative Dashboard"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Pellsea - Admin</title>
+  </head>
+  <body onload="resize()" onresize="resize()">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" style="width: 100%; height: 100%;"></div>
+
+    <script type="text/javascript"> <!--
+      function resi() {
+        alert("working...")
+      }
+      function resize() {
+        if (window.innerWidth < 1024) {var mobile="_M"}
+        else {var mobile=""}
+
+        document.body.style.width = window.innerWidth + "px";
+        document.body.style.height = window.innerHeight + "px";
+        
+        for (n=0; n<document.getElementsByClassName("view").length; n++) {
+          document.getElementsByClassName("view")[n].className = document.getElementsByClassName("view")[n].className.replace(/_M view/g, " view").replace(/ view/g, mobile+" view")
+        }
+
+        if (document.getElementsByClassName("dash_menu_glass_M").length) {
+          document.getElementsByClassName("dash_menu_glass_M")[0].style.display = "none";
+        }
+
+        if(document.getElementsByClassName("sidebar").length) {
+          document.getElementsByClassName("sidebar")[0].style.display = "block";
+        }
+        else if(document.getElementsByClassName("sidebar_M").length) {
+          document.getElementsByClassName("sidebar_M")[0].style.display = "none";
+        }
+
+        if (document.getElementsByClassName("dash_body").length) {
+          document.getElementsByClassName("dash_body")[0].style.height = (window.innerHeight-document.getElementsByClassName("navbar")[0].clientHeight)+"px";
+        }
+        else if (document.getElementsByClassName("dash_body_M").length) {
+          document.getElementsByClassName("dash_body_M")[0].style.height = (window.innerHeight-document.getElementsByClassName("navbar")[0].clientHeight+1)+"px";
+        } 
+
+        if(document.getElementsByClassName("dash_display").length) {
+          document.getElementsByClassName("dash_display")[0].style.paddingLeft = document.getElementsByClassName("sidebar")[0].clientWidth+"px";
+        }
+        else if(document.getElementsByClassName("dash_display_M").length) {
+          document.getElementsByClassName("dash_display_M")[0].style.paddingLeft = "0px";
+        }
+
+        if(document.getElementsByClassName("menu").length) {
+          document.getElementsByClassName("menu")[0].addEventListener("click", toggle_menu);
+          document.getElementsByClassName("dash_menu_glass_M")[0].addEventListener("click", toggle_menu);
+        }
+        else if(document.getElementsByClassName("menu_M").length) {
+          document.getElementsByClassName("menu_M")[0].addEventListener("click", toggle_menu);
+          document.getElementsByClassName("dash_menu_glass_M")[0].addEventListener("click", toggle_menu);
+        }
+
+        if(document.getElementsByClassName("active_menu").length) {
+          document.getElementsByClassName("active_menu")[0].removeAttribute("href");
+        }
+
+        if(document.getElementsByClassName("home_graphs").length) {
+          document.getElementsByClassName("home_graphs")[0].style.width = (document.getElementsByClassName("home_topstats")[0].clientWidth-document.getElementsByClassName("home_aside")[0].clientWidth)+"px";
+        }
+        else if(document.getElementsByClassName("home_graphs_M").length) {
+          document.getElementsByClassName("home_graphs_M")[0].style.width = "auto";
+        }
+      }
+
+      function toggle_menu() {0
+        if(document.getElementsByClassName("sidebar_M")[0].style.display === "none") {
+            document.getElementsByClassName("sidebar_M")[0].style.display = "block";
+            document.getElementsByClassName("dash_menu_glass_M")[0].style.display = "block"
+        }
+        else {
+            document.getElementsByClassName("sidebar_M")[0].style.display = "none"
+            document.getElementsByClassName("dash_menu_glass_M")[0].style.display = "none"
+        }
+      }
+    //-->
+    </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
