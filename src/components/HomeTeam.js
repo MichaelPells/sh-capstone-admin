@@ -18,14 +18,14 @@ const HomeTeam = ({theme=""}) => {
     return (
         <React.Fragment>
             <h1 className={"heading2"+theme+" view"}> Best Sellers This Week </h1>
-            <table className="table1 view" cellSpacing="0px">
-                <thead>
-                    <tr>
-                    <th style={{width: "5em", boxSizing: "border-box"}}></th><th style={{minWidth: "30%", width: "100%"}}>Name</th><th className="_M view">Gender</th><th className="_M view">Email</th><th className="_M view">Phone</th>
-                    </tr>
-                </thead>
-                <tbody>{ team?
-                        team.map(member => (
+            { team?
+                <table className="table1 view" cellSpacing="0px">
+                    <thead>
+                        <tr>
+                        <th style={{width: "5em", boxSizing: "border-box"}}></th><th style={{minWidth: "30%", width: "100%"}}>Name</th><th className="_M view">Gender</th><th className="_M view">Email</th><th className="_M view">Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>{ team.map(member => (
                         <tr key={member.id}>
                             <td style={{padding: "0em", width: "5em"}}> <img src={member.image} alt=""/> </td>
                             <td style={{minWidth: "30%", width: "100%"}}>
@@ -34,17 +34,13 @@ const HomeTeam = ({theme=""}) => {
                             </td>
                             <td className="_M view"> {member.gender[0].toUpperCase()+member.gender.slice(1)} </td><td className="_M view"> {member.email} </td><td className="_M view"> {member.phone} </td>
                         </tr>
-                    ) )
-                    :
-                    <tr>
-                        <td colSpan="5" style={{padding: "0em"}}>
-                            <div align="center" className="loadError">
-                                Oops! Someone's not connected to the Internet.
-                            </div>
-                        </td>
-                    </tr>
-                }</tbody>
-            </table>
+                    ) ) }</tbody>
+                </table>
+                :
+                <div className="loadError">
+                    Oops! Someone's not connected to the Internet.
+                </div>
+            }
         </React.Fragment>
     )
 }

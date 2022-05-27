@@ -7,12 +7,12 @@ import Clients from './pages/Clients';
 import Products from './pages/Products';
 import Signout from './pages/Signout';
 
-import {HashRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
 
   return (
-      <HashRouter>
+      <BrowserRouter basename="/sh-capstone-admin">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
@@ -20,9 +20,9 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/products" element={<Products />} />
-          {/* <Route path="*" element={<Home />} /> */}
+          <Route path="*" element={<Home />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
   );
 }
 

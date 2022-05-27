@@ -9,6 +9,7 @@ body {
   font-family: "Myriad Pro", Helvetica, Geneva, Arial, "Helvetica Neue", Frutiger, "Frutiger Linotype", Univers, Calibri, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", sans-serif;
   font-size: 100%;
   background-image: url("./assets/images/Background.jpg");
+  background-color: #000000;
   background-repeat: no-repeat repeat;
   background-position: center;
   background-size: 100%;
@@ -32,7 +33,6 @@ button, input[type="submit"] {
   width: 100%;
   height: 100%;
   display: table;
-  background: rgba(0, 0, 0, 0.8);
   overflow: clip;
 }
 
@@ -118,7 +118,6 @@ button, input[type="submit"] {
 
 .dashboard {
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
   overflow: clip;
 }
 
@@ -139,7 +138,10 @@ button, input[type="submit"] {
   display: block;
   padding: 0.85em 2em 0.85em 2em;
 }
-.active_menu {
+.sidebar_item:hover {
+  background: rgba(0,0,0,0.05)
+}
+.active_menu, .active_menu:hover {
   background: rgba(0,0,0,0.2);
 }
 
@@ -159,6 +161,7 @@ button, input[type="submit"] {
   height: 2px;
   background: rgba(0,0,0,0.1);
   border-bottom: 2px rgba(255,255,255,0.1) solid;
+  box-sizing: content-box;
 }
 
 .dash_menu_glass_M {

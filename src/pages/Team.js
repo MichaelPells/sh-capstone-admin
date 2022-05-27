@@ -31,14 +31,14 @@ const Team = () => {
                 <div className="dash_display view">
                     <div className="dash_body view">
                         <h1 className="heading1 view"> The Pellsea Team </h1>
-                        <table className="table1 view" cellSpacing="0px">
-                            <thead>
-                                <tr>
-                                <th style={{width: "5em", boxSizing: "border-box"}}></th><th style={{minWidth: "30%", width: "100%"}}>Name</th><th className="_M view">Gender</th><th className="_M view">Email</th><th className="_M view">Phone</th>
-                                </tr>
-                            </thead>
-                            <tbody>{ team?
-                                 team.map(member => (
+                        { team?
+                            <table className="table1 view" cellSpacing="0px">
+                                <thead>
+                                    <tr>
+                                    <th style={{width: "5em", boxSizing: "border-box"}}></th><th style={{minWidth: "30%", width: "100%"}}>Name</th><th className="_M view">Gender</th><th className="_M view">Email</th><th className="_M view">Phone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>{ team.map(member => (
                                     <tr key={member.id}>
                                         <td style={{padding: "0em", width: "5em"}}> <img src={member.image} alt=""/> </td>
                                         <td style={{minWidth: "30%", width: "100%"}}>
@@ -47,17 +47,13 @@ const Team = () => {
                                         </td>
                                         <td className="_M view"> {member.gender[0].toUpperCase()+member.gender.slice(1)} </td><td className="_M view"> {member.email} </td><td className="_M view"> {member.phone} </td>
                                     </tr>
-                                ) )
-                                :
-                                <tr>
-                                    <td colSpan="5" style={{padding: "0em"}}>
-                                        <div align="center" className="loadError">  
-                                            Oops! It's just you yet! Or, maybe you're just not connected to the Internet.
-                                        </div>
-                                    </td>
-                                </tr>
-                            }</tbody>
-                        </table>
+                                ) ) }</tbody>
+                            </table>
+                            :
+                            <div align="center" className="loadError">  
+                                Oops! It's just you yet! Or, maybe you're just not connected to the Internet.
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
