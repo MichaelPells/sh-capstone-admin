@@ -23,9 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 # other apps
-._apps.txt
+_apps.txt
 _restaurant
 _admindashboard
 
 # extras
-.modernfonts.css
+modernfonts.css
