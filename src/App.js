@@ -7,12 +7,12 @@ import Clients from './pages/Clients';
 import Products from './pages/Products';
 import Signout from './pages/Signout';
 
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {HashRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
 
   return (
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
@@ -22,7 +22,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           {/* <Route path="*" element={<Home />} /> */}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
   );
 }
 
